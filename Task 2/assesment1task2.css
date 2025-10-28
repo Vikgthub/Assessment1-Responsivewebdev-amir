@@ -1,0 +1,486 @@
+
+
+/*
+
+Color Code:
+
+Black:             #070410
+Dark blue:         #231651
+Turquoise blue:    #4DCCBD
+Green-Yellow:      #EEF36A
+White:             #FFFFFF
+
+*/
+
+
+
+
+
+/* add styling to the body (bg color, font, margin) */
+body {
+    background-color: #070410;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+
+
+
+
+
+
+
+
+
+  /* add the styling to the header */
+  .navbar {
+    background-color: #EEF36A; 
+    display: flex; /* use flex to display to put the items side by side */
+    align-items: center; /* align items */
+    justify-content: space-between; /* add space in between the elements */
+    padding: 15px 60px; /* add padding */
+  
+  }
+  
+  /* add style to logo */
+  .logo {
+    font-size: 36px;
+    font-weight: 800;
+    color: #070410;
+  }
+ 
+  
+  /* display the navigation bar sub pages links side by side */
+  .nav-links {
+    display: flex;
+    gap: 30px;
+  }
+  
+  
+  .nav-links a {
+    text-decoration: none; /* optional :: removes the underline effect on nav bar sub pages */
+    color: #070410;
+    font-weight: 600;
+    transition: color 0.2s ease;
+  }
+  
+  /* nav bar sub pages hover effect */
+  .nav-links a:hover {
+    color:  #231651; 
+  }
+  
+  /* add styling to search bar  */
+  .search-btn {
+    background-color: #231651;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 12px 30px;
+    border: 3px solid #4DCCBD; 
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  /* add hover effect */
+  .search-btn:hover {
+    background-color:  #4DCCBD;
+    color: #3C1361;
+  }
+  
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* article container  movie section  styling (for first movie) */
+.movie-section {
+    display: flex;
+    justify-content: center;
+    margin: 60px 0;
+  }
+  
+  /* movie card styling */
+  .movie-card_a {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    border-bottom: 4px solid #4DCCBD; /* optional ::::: can add border effect at bottom, makes the presentaion more beautiful*/
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    width: 900px;     
+    max-width: 90%;   
+  }
+  
+  /* resize the movie images */
+  .movie-poster_a {
+    width: 100%;
+    height: auto;
+    /* use 'object-fit: cover;' to resize to fit container */
+    object-fit: cover; 
+    /* add radius to make it more presentable */
+    border-top-left-radius: 20px; 
+    border-top-right-radius: 20px;
+  }
+  
+  /* add styling to movie info */
+  .movie-info_a {
+    padding: 25px 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  /* the tittle */
+  .movie-info_a h3 {
+    font-size: 22px;
+    font-weight: 800;
+    color: #070410;
+    margin: 0 0 12px 0;
+  }
+  
+  /* and the text (paragraph) */
+  .movie-info_a p {
+    font-size: 15px;
+    color: #070410;
+    margin-bottom: 25px;
+    line-height: 1.5;
+  }
+  
+  /* add styling to the button */
+  .watch-btn_a {
+    background-color: #231651; 
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 28px;
+    font-weight: 700;
+    align-self: flex-start;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .watch-btn_a:hover {
+    background-color: #4DCCBD; 
+    color: #231651;
+  }
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* add styling to the next two movies */
+.movie-sectionzzzzz {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin: 50px 0;
+    flex-wrap: wrap; 
+  }
+  
+  
+  .movie-card_z {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    border-bottom: 4px solid #4DCCBD; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    width: 410px;  /
+  }
+  
+  
+  .movie-poster_z {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  
+  
+  .movie-info_z {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+  }
+  
+  
+  .movie-info_z h3 {
+    font-size: 18px;
+    font-weight: 800;
+    color: #070410;
+    margin: 0 0 10px 0;
+  }
+  
+  
+  .movie-info_z p {
+    font-size: 14px;
+    color: #070410;
+    margin-bottom: 20px;
+    line-height: 1.4;
+  }
+  
+
+  .watch-btn_z {
+    background-color: #231651; 
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 700;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: 0.3s ease;
+  }
+  
+  .watch-btn_z:hover {
+    background-color: #4DCCBD; 
+    color: #231651;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* once again add styling to the last three movies */
+.other-movie-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding: 50px 0;
+    background-color: #070410;
+  }
+  
+
+
+
+
+  .movie-card {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 80%;
+    max-width: 900px;
+    border-bottom: 4px solid #4DCCBD; /* teal outline like your screenshot */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  }
+  
+
+  .movie-poster {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+
+  .movie-info {
+    padding: 20px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+ 
+  .movie-info h3 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    font-weight: 800;
+    color: #070410;
+  }
+  
+
+  .movie-info p {
+    font-size: 14px;
+    color: #070410;
+    margin-bottom: 20px;
+  }
+
+
+
+
+
+
+
+
+  
+
+  .watch-btn {
+    background-color: #231651; 
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 700;
+    align-self: flex-start;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .watch-btn:hover {
+    background-color: #4DCCBD;
+    color: #231651;
+  }
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+ /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+
+
+
+
+
+
+  /* --- adjust the contents to fit smartphone screen --- */
+@media screen and (max-width: 720px) and (min-width: 360px) {
+    
+
+
+  .nav-links {
+    display: none;
+  }
+
+
+
+  /* change the two column movie cards to one column and stack everything vertically to fit smartphone screen */
+  .movie-sectionzzzzz {
+      flex-direction: column; /* use 'flex-direction: column;'  to stack movie cards vertically */
+      align-items: center;    /* center the stacked movie cards */
+      gap: 40px;
+  }
+
+  
+  /* adjust the hight and width and remove the margin */
+  .movie-card_z 
+  ,.movie-card_a 
+  ,.movie-card {
+      width: 100%;
+      max-height: 850px;
+      max-width: 100%; /* Adjust max width as needed */
+  }
+
+
+
+
+  /* fix the last 3 movie cards (so the image goes above the text and everything aligns properly) */
+.movie-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  order: -1; 
+  margin-bottom: 10px; 
+}
+
+ 
+ 
+/* resize the images so they fit the container  */
+
+.movie-poster_a 
+,.movie-poster_z 
+,.movie-poster
+{
+width: 100%;
+height: auto;
+object-fit: cover;
+border-top-left-radius: 20px; 
+border-top-right-radius: 20px;
+}
+
+
+
+
+
+/* apply styling to the text info as well */
+ .movie-info_a 
+,.movie-info_z 
+,.movie-info 
+{
+  padding: 25px 30px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.movie-info_a 
+,.movie-info_z 
+,.movie-info h3
+ {
+  font-size: 22px;
+  font-weight: 800;
+  color: #070410;
+  margin: 0 0 12px 0;
+}
+
+.movie-info_a 
+,.movie-info_z 
+,.movie-info p
+
+{
+  font-size: 15px;
+  color: #070410;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+  
+}
+
