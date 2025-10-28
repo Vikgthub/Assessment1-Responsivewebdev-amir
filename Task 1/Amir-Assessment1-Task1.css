@@ -1,0 +1,467 @@
+
+
+
+
+
+/* add your styling to the body (the font size, color, alignment etc...) */
+  body {
+    font-family:  Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background-color: #e9e9e9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+
+
+  
+
+  /* add styling to the header  */
+  
+  header { 
+    display: flex; /* use disply flex to align your elements */
+    flex-direction: column; /* align them in column form so logo goes above the nav bar */
+    align-items: center; /* center align the items */
+    padding-bottom: 50px; /* add padding spacing */
+  }
+  
+
+  /* fix the image width and spacing */
+  .logo img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 30px;
+  }
+  
+
+  /* display the nav bar sub pages */
+  .pages nav {
+    display: flex;
+    gap: 90px;
+  }
+  
+  /* add styling to nav bar */
+  .pages a {
+    color: #14181d;
+    font-size: 20px;
+  }
+  
+  
+
+
+
+
+
+
+
+/* add styling to the content section */
+  .content_section {
+    background-color: #ffffff;
+    width: 1000px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+
+
+
+
+  
+
+
+
+  /* add your styling to the first section (erased tapes) */
+  .first_tittle {
+    font-size: 80px;
+    align-self: flex-start;
+    padding-bottom: 10px;
+  }
+  
+  .sub_title {
+    font-size: 48px;
+    align-self: flex-start;
+    padding-bottom: 30px;
+  }
+  
+  .sub_title_contents {
+    font-size: 18px;
+    text-align: justify;
+    padding-bottom: 50px;
+  }
+  
+  
+
+
+
+
+  
+
+/* style the main content section */
+.Main_content {
+  /* add three columns counts so the text spans into 3 (heading and paragraph) columns */
+  column-count: 3;
+  column-gap: 40px; /* add gaps (this is crucial to make the texts span into three columns but flow the text direction in one vertical line) */
+  padding-bottom: 50px; 
+  width: 100%; 
+}
+
+/* add styling to the heading */
+.Headingz {
+  font-size: 36px;
+  /* add spacing */
+  margin-top: 20px; 
+  margin-bottom: 10px;
+}
+
+/* add styling to the paragraphs */
+.paragraphz {
+  font-size: 16px;
+  text-align: justify;
+  margin-bottom: 30px;  
+}
+
+
+
+
+
+  
+
+
+/* add styling to te photos */
+
+
+/* use grid format to display the images (according to the given assignment wire-frame */
+  .photos_section {
+    display: grid;
+    /* apply the grid temple (on how you want the photos the be displayed) */
+    /* in this case the featured image spans into the first column and row, while other images span into 2 different rows and columns */
+    grid-template-areas:
+      "featured first second"
+      "featured third fourth";
+    /* use fraction columns to put the images in (create three columns where the first column is twice as big as the other two) */
+    grid-template-columns: 2fr 1fr 1fr; 
+    /* add spacing betwenn photos section and the author section */
+    padding-bottom: 50px;
+    width: 100%; 
+    
+  }
+  
+  /* specify your areas within the grid layout */
+  .featured_pic {
+    grid-area: featured;
+  }
+  
+  .grid_pic_1 { grid-area: first; }
+  .grid_pic_2 { grid-area: second; }
+  .grid_pic_3 { grid-area: third; }
+  .grid_pic_4 { grid-area: fourth; }
+  
+  
+
+
+/* resize the image to fit in the grid */
+  #featured_photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+
+  /* do the same for the other images */
+  #first,
+  #second,
+  #third,
+  #fourth {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 5px;
+  }
+  
+  
+/* make the images in the main content area responsive */
+  .content_section img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+
+
+
+
+
+  
+  
+
+
+
+  /* add styline to the author section */
+  .about_the_author_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding-bottom: 50px;
+  }
+  
+  /* make the author picture round (also fix the width)*/
+  .author_profile img {
+    border-radius: 100%;
+    width: 200px;
+    height: auto;
+  }
+
+  
+  /* add styling to the heafing */
+  .author_heading {
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* and the text */
+  .about_author {
+    font-size: 16px;
+    text-align: justify;
+    max-width: 500px;
+  }
+  
+
+
+  /* add the styling to the footer */
+  footer {
+    font-size: 16px;
+    background-color: #14181d;
+    color: #e9e9e9;
+    text-align: center;
+    padding: 50px;
+    width: 100%;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* ---------------------------------------------------------------------------------------------------------------------------- */
+  
+  /* adjust to tablet screen size */
+
+  @media (max-width: 1024px) { 
+    
+    /* fix the width and padding */
+    .content_section {
+        width: 90%; 
+        padding: 30px; 
+    }
+    
+
+    
+    /* use 1 column rather than 3 */
+    .Main_content {
+        column-count: 1; 
+        column-gap: 0; 
+    }
+
+  
+
+    /* remove the feautured photo (change the grid area template */
+    .photos_section {
+        grid-template-areas: 
+            "first second"
+            "third fourth";
+            
+        /* set up two equal columns */
+        grid-template-columns: 1fr 1fr; 
+    }
+
+    /* 4. hide the featured photo */
+    .featured_pic {
+        display: none; 
+    }
+    
+    /* Stack author info and profile vertically */
+    .about_the_author_section {
+        flex-direction: column; 
+        text-align: center;
+        gap: 30px;
+    }
+
+    .author_profile {
+      order: -1; 
+      margin-bottom: 10px; 
+  }
+    
+  
+    /* center align the author text */
+    .about_author {
+        text-align: center; 
+        max-width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+
+/* adjust to smartphone screen size */
+
+@media (max-width: 720px) {
+
+
+
+  /* make the content section take up the whole margin */
+  .content_section {
+      width: auto; /* override the fixed and the 90% settings */
+      padding: 20px;
+  }
+
+
+
+
+/* lay out thr nav bar horizontaly */
+.pages nav { 
+  display: flex; 
+}
+
+
+
+
+  /* text flows in one diretion */
+  .Main_content {
+      column-count: 1; 
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+  }
+
+  /* 3. Featured photo disappears once again */
+  .featured_pic {
+      display: none; 
+  }
+
+  /* other photos flow in one column line */
+  .photos_section {
+      /* dedefine the grid for a single column and stack the remaining 4 photos */
+      display: grid;
+      grid-template-areas: 
+          "first" 
+          "second"
+          "third" 
+          "fourth";
+          /* one full width column */
+      grid-template-columns: 1fr; 
+  }
+
+  /* Adjust the main header to stack logo and navigation vertically */
+  .header {
+      padding-bottom: 20px;
+  }
+
+  .pages nav {
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+  }
+
+  
+  .first_tittle {
+      font-size: 50px;
+  }
+
+  .sub_title {
+      font-size: 32px;
+  }
+
+  .author_heading {
+      font-size: 32px;
+  }
+  
+  
+  .about_the_author_section {
+      flex-direction: column; 
+      gap: 20px; 
+  }
+
+  
+  .author_profile {
+      order: -1; 
+      margin-bottom: 10px; 
+  }
+  
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+
+/* adjust to smaller smartphone screen size */
+
+@media (max-width: 720px) {
+
+
+
+  /* make the content section take up the whole margin */
+  .content_section {
+      width: auto; /* override the fixed and the 90% settings */
+      padding: 12px;
+  }
+
+
+}
+
+
+
